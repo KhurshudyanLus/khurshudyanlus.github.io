@@ -1,5 +1,7 @@
 #projects {
-    padding: 64px 64px;
+    padding: 64px 16px 160px 16px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #projects h2 {
