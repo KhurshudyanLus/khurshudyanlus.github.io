@@ -177,6 +177,14 @@
     text-align: center;
 }
 
+.text-magenta {
+    color: var(--magenta);
+}
+
+.text-aqua {
+    color: var(--aqua);
+}
+
 /* #about ul {
     list-style-type: none;
     padding: 0;
