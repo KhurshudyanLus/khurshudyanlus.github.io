@@ -177,12 +177,12 @@
     text-align: center;
 }
 
-.text-magenta {
-    color: var(--magenta);
+.blackbox .text-magenta {
+    color: var(--magenta) !important;
 }
 
-.text-aqua {
-    color: var(--aqua);
+.blackbox .text-aqua {
+    color: var(--aqua) !important;
 }
 
 /* #about ul {
