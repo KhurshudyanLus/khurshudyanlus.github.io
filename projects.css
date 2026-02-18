@@ -51,17 +51,24 @@ article img {
    padding: 16px;
 }
 
-.fullsize {
-    width: 80%;
-    height: 80%;
-    z-index: 999;
-    background-color: #EFEFEF;
+.image-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
-    position:fixed;
-    bottom: 3px;
-    left:10%; 
-   
-    
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.image-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 25px;
+    border-top: 1px solid var(--aqua);
+    border-left: 1px solid var(--aqua);
+    background-color: #EFEFEF;
+    padding: 16px;
 }
 
 .footer {
@@ -109,15 +116,6 @@ article img {
 
         #projects img {
             padding: 0;
-        }
-
-        .fullsize {
-            width: 100%;
-            height: auto;
-            position: static; 
-            bottom: auto;     
-            left: auto;       
-            z-index: auto; 
         }
         
     }

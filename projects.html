@@ -222,11 +222,38 @@
          <p><small> &copy;Lusine K. All rights reserved.</small></p>
     </footer>
     <script> 
+    function zoom(element) {
+        // Remove existing overlay if any
+        let existingOverlay = document.querySelector(".image-overlay");
+        if (existingOverlay) {
+            existingOverlay.remove();
+        }
 
-    function zoom (element) {
-        element.classList.toggle("fullsize")
+        // Disable page scroll while overlay is open
+        document.body.style.overflow = "hidden";
+
+        // Create overlay
+        const overlay = document.createElement("div");
+        overlay.className = "image-overlay";
+
+        // Create enlarged image
+        const img = document.createElement("img");
+        img.src = element.src;
+        img.alt = element.alt || "";
+
+        overlay.appendChild(img);
+
+        // Close when clicking on the background or the image
+        overlay.addEventListener("click", function (event) {
+            if (event.target === overlay || event.target === img) {
+                overlay.remove();
+                // Re-enable page scroll when overlay is closed
+                document.body.style.overflow = "";
+            }
+        });
+
+        document.body.appendChild(overlay);
     }
-    
     </script>
 </body>
 </html>
