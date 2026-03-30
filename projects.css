@@ -1,0 +1,122 @@
+#projects {
+    padding: 64px 16px 160px 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#projects h2 {
+    font-size: 40px;
+    margin-bottom: calc(40*1.5);
+}
+
+#projects h4 {
+    font-size: 16px;
+    font-family: var(--mono);
+    margin-bottom: 0;
+}
+
+#projects h3 {
+    color: var(--aqua);
+}
+
+.blackbox {
+    background-color: var(--black);
+    padding: 16px;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+article img {
+    cursor: pointer;
+}
+
+#projects ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 16px;
+    justify-content: flex-start;
+    font-size: 16px;
+}
+
+#projects img {
+   margin: 31px 0 64px 0;
+   border-top:  1px solid var(--aqua);
+   border-left: 1px solid var(--aqua);
+   border-radius: 25px;
+   padding: 16px;
+}
+
+.image-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.image-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 25px;
+    border-top: 1px solid var(--aqua);
+    border-left: 1px solid var(--aqua);
+    background-color: #EFEFEF;
+    padding: 16px;
+}
+
+.footer {
+    align-items: center;
+}
+
+
+
+@media (min-width: 550px) {
+    article {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        gap:16px;
+    }
+
+    #projects img {
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+    .text {
+        text-align: right;
+        order: 2;
+        grid-column: 5/11;
+        grid-row: 1/2;
+    }
+    #projects ul {
+        justify-content: flex-end;
+    }
+
+    #projects .reverse .text {
+        grid-column: 1/7;
+        order: 2;
+        text-align: left;
+      }
+      #projects .reverse img {
+        grid-column: 6/11;
+        grid-row: 1/2;
+      }
+      #projects .reverse ul {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width:800px) {
+
+        #projects img {
+            padding: 0;
+        }
+        
+    }
+
